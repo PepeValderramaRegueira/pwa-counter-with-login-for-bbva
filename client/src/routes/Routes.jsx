@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, RouteProps } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 const Routes = ({ routes }) => {
   return (
