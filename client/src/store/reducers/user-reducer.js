@@ -23,12 +23,11 @@ function userReducer(state = initialUserState, action) {
     case LOGIN:
       return {
         ...state,
-        ...payload.user
+        ...payload.user,
+        isLoggedIn: true
       }
-
     case LOGOUT:
       return initialUserState;
-
     default:
       return state;
   }
