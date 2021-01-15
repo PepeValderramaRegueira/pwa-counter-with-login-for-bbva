@@ -30,11 +30,19 @@ export const login = (user) => async(dispatch) => {
   }
 };
 
-export const logout = () => {
-  deleteFromLocalStorage('pwa-bbva-user');
+export const logout = (userId) => async(dispatch) => {
+  try {
+    await axios.post(`${process.env.REACT_APP_SERVER}/auth/logout`, {
+      _id: userId
+    });
 
-  return {
-    type: LOGOUT
+    deleteFromLocalStorage('pwa-bbva-user');
+
+    dispatch({
+      type: LOGOUT
+    });
+  } catch(error) {
+
   }
 };
 
