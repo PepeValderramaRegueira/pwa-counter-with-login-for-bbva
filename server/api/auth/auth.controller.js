@@ -6,12 +6,12 @@ const {
   USER_CREATED,
   USER_PASSWORD_EMPTY,
   USER_PASSWORD_WRONG,
-  USER_NOT_FOUND
+  USER_UPDATED
 } = require('./../../utils/messages');
 const { response } = require('./../../utils/responses');
 const { saveUserToDB } = require('./../libs/users.lib');
 
-const signup = async(req, res, next) => {
+const signup = async(req, res) => {
   const serverResponse = response(res);
   const { password, repeatedPassword } = req.body;
 
@@ -48,7 +48,7 @@ const signup = async(req, res, next) => {
   }
 }
 
-const login = async(req, res, next) => {
+const login = async(req, res) => {
   const serverResponse = response(res);
   const { email, password } = req.body;
 
@@ -81,7 +81,24 @@ const login = async(req, res, next) => {
   }
 }
 
+const logout = async(req, res) => {
+  const serverResponse = response(res);
+
+  try {
+    await Users.findByIdAndUpdate(req.body._id, {
+      lastLogin: Date.now()
+    }, { new: true });
+
+    return serverResponse({
+      message: USER_UPDATED
+    })
+  } catch(error) {
+
+  }
+}
+
 module.exports = {
   signup,
-  login
+  login,
+  logout
 }
