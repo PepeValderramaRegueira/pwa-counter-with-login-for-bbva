@@ -1,0 +1,43 @@
+@import './../../styles/variables';
+
+.button {
+  background-color: color('light-grey');
+  color: color('black');
+  font-family: font('primary');
+
+  border: none;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  border-radius: 2px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color .3s, box-shadow .1s;
+  position: relative;
+
+  &:hover {
+    background-color: color('light-grey-2');
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    animation: button-click .1s forwards;
+  }
+
+  &.is-primary {
+    background-color: color('primary');
+    color: color('on-primary');
+
+    &:hover {
+      background-color: color('dark-primary');
+    }
+  }
+}
+
+@keyframes button-click {
+  to {
+    box-shadow: 0 3px 5px rgba(color('black'), .32);
+  }
+}
