@@ -1,8 +1,7 @@
 import { useDispatch } from 'react-redux';
-import { Field, Input, Label } from 'components';
-import { useInputValue } from 'hooks/useInputValue';
 import { login } from 'store/actions/user-actions';
-import Button from 'components/Button';
+import { useInputValue } from 'hooks/useInputValue';
+import { Field, Input, Label, Button } from 'components';
 
 const Login = () => {
   const [ email, handleEmailChange ] = useInputValue();

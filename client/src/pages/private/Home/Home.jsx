@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from 'store/actions/user-actions';
-import Button from 'components/Button';
+import { Button } from 'components';
 
 const Home = () => {
   const user = useSelector(({ user }) => user);
