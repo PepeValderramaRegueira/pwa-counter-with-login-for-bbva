@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import { Field, Input, Label } from 'components';
 import { useInputValue } from 'hooks/useInputValue';
 import { login } from 'store/actions/user-actions';
+import Button from 'components/Button';
 
 const Login = () => {
   const [ email, handleEmailChange ] = useInputValue();
@@ -34,6 +35,7 @@ const Login = () => {
         <Field>
           <Label text='Password' />
           <Input
+            type='password'
             value={password}
             id='password'
             placeholder='password'
@@ -41,9 +43,9 @@ const Login = () => {
             onChange={handlePasswordChange}
           />
         </Field>
-        <button type="submit">
+        <Button type="submit">
           LOGIN
-        </button>
+        </Button>
       </form>
     </section>
   );
