@@ -1,0 +1,12 @@
+@import './../../styles/variables';
+
+.icon {
+  font-size: 1rem;
+
+  &.is-primary { color: color('primary') }
+
+  &.is-small { font-size: .75rem }
+  &.is-medium { font-size: 1.5rem }
+  &.is-big { font-size: 2rem }
+  &.is-huge { font-size: 4rem }
+}
