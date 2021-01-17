@@ -42,8 +42,8 @@ const Login = () => {
             onChange={handlePasswordChange}
           />
         </Field>
-        <Button type="submit">
-          LOGIN
+        <Button type="submit" isPrimary>
+          Login
         </Button>
       </form>
     </section>
