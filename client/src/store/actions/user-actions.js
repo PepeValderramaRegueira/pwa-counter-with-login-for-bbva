@@ -25,11 +25,21 @@ export const login = (user) => async(dispatch) => {
       password: user.password
     });
 
+    console.log('respuesta del server', loginResponse);
+    console.log('lo que salvamos', {
+      userLoggedIn: true,
+      email: loginResponse.data.email,
+      name: loginResponse.data.name,
+      surname: loginResponse.data.surname,
+      lastLogin: loginResponse.data.lastLogin
+    });
+
     saveToLocalStorage('pwa-bbva-user', {
       userLoggedIn: true,
       email: loginResponse.data.email,
       name: loginResponse.data.name,
-      surname: loginResponse.data.surname
+      surname: loginResponse.data.surname,
+      lastLogin: loginResponse.data.lastLogin
     });
 
     dispatch({
@@ -72,7 +82,9 @@ export const checkSession = () => {
   if (loggedInUser) {
     return {
       type: LOGIN,
-      payload: loggedInUser
+      payload: {
+        user: loggedInUser
+      }
     }
   }
 

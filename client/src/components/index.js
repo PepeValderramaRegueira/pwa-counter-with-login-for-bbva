@@ -8,6 +8,7 @@ import AppContainer from './AppContainer';
 import Title from './Title';
 import Avatar from './Avatar';
 import FlexContainer from './FlexContainer';
+import Timer from './Timer';
 
 export {
   Field,
@@ -19,5 +20,6 @@ export {
   AppContainer,
   Title,
   Avatar,
-  FlexContainer
+  FlexContainer,
+  Timer
 }
