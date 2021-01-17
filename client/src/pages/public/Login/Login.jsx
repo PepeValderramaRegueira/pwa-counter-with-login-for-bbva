@@ -21,27 +21,27 @@ const Login = () => {
     <section className='login-page'>
       <h1>Login page</h1>
       <form onSubmit={handleFormSubmit}>
-        <Field>
-          <Label text='Email' />
-          <Input
+        <Field
+          Label={<Label text='Email' />}
+          Input={<Input
             value={email}
             id='email'
             placeholder='Email'
             name='email'
             onChange={handleEmailChange}
-          />
-        </Field>
-        <Field>
-          <Label text='Password' />
-          <Input
+          />}
+        />
+        <Field
+          Label={<Label text='Password' />}
+          Input={<Input
             type='password'
             value={password}
             id='password'
             placeholder='password'
             name='password'
             onChange={handlePasswordChange}
-          />
-        </Field>
+          />}
+        />
         <Button type="submit" isPrimary>
           Login
         </Button>
