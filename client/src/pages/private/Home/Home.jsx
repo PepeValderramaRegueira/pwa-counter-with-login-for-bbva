@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from 'store/actions/user-actions';
-import { Button, Title } from 'components';
+import { Button, Avatar } from 'components';
 
 const Home = () => {
   const user = useSelector(({ user }) => user);
@@ -10,7 +10,7 @@ const Home = () => {
   
   return (
     <section>
-      <Title text='Welcome!' tag='h1' />
+      <Avatar user={user} />
       <Button onClick={handleLogout} isPrimary>
         Logout
       </Button>

@@ -6,6 +6,7 @@ import Icon from './Icon';
 import Form from './Form';
 import AppContainer from './AppContainer';
 import Title from './Title';
+import Avatar from './Avatar';
 
 export {
   Field,
@@ -15,5 +16,6 @@ export {
   Icon,
   Form,
   AppContainer,
-  Title
+  Title,
+  Avatar
 }
