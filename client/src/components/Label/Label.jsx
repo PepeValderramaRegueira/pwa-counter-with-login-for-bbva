@@ -1,3 +1,5 @@
+import './Label.scss';
+
 const Label = ({
   htmlFor,
   text = '',
