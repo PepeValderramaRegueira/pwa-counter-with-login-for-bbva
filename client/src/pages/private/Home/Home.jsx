@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from 'store/actions/user-actions';
-import { Button, Avatar } from 'components';
+import { Button, Avatar, FlexContainer } from 'components';
 
 const Home = () => {
   const user = useSelector(({ user }) => user);
@@ -11,9 +11,11 @@ const Home = () => {
   return (
     <section>
       <Avatar user={user} />
-      <Button onClick={handleLogout} isPrimary>
-        Logout
-      </Button>
+      <FlexContainer extraClasses='jc-c'>
+        <Button onClick={handleLogout} isPrimary>
+          Logout
+        </Button>
+      </FlexContainer>
     </section>
   );
 }
