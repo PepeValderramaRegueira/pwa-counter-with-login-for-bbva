@@ -7,6 +7,7 @@ import Form from './Form';
 import AppContainer from './AppContainer';
 import Title from './Title';
 import Avatar from './Avatar';
+import FlexContainer from './FlexContainer';
 
 export {
   Field,
@@ -17,5 +18,6 @@ export {
   Form,
   AppContainer,
   Title,
-  Avatar
+  Avatar,
+  FlexContainer
 }
