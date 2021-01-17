@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { LoggedInRoutes, LoggedOutRoutes } from './routes';
 import { checkSession } from 'store/actions/user-actions';
+import { AppContainer } from 'components';
 
 const App = () => {
   const user = useSelector(({ user }) => user);
@@ -12,9 +13,9 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <AppContainer>
       {user.isLoggedIn ? <LoggedInRoutes /> : <LoggedOutRoutes />}
-    </div>
+    </AppContainer>
   );
 }
 

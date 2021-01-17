@@ -4,6 +4,11 @@
   .field:not(:last-of-type) {
     margin-bottom: 1rem;
   }
+
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 .form.is-access {
