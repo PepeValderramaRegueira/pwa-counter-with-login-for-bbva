@@ -1,0 +1,18 @@
+@import './../../styles/variables';
+
+.title {
+  font-family: font('primary');
+
+  &.is-h1,
+  &.is-h2,
+  &.is-h3 {
+    color: color('black');
+  }
+  
+  &.is-h1 {
+    padding-bottom: .5rem;
+    font-weight: font('medium');
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}

@@ -5,6 +5,7 @@ import Button from './Button';
 import Icon from './Icon';
 import Form from './Form';
 import AppContainer from './AppContainer';
+import Title from './Title';
 
 export {
   Field,
@@ -13,5 +14,6 @@ export {
   Button,
   Icon,
   Form,
-  AppContainer
+  AppContainer,
+  Title
 }

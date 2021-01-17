@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from 'store/actions/user-actions';
-import { Button } from 'components';
+import { Button, Title } from 'components';
 
 const Home = () => {
   const user = useSelector(({ user }) => user);
@@ -10,9 +10,9 @@ const Home = () => {
   
   return (
     <section>
-      <h1>Home</h1>
+      <Title text='Welcome!' tag='h1' />
       <Button onClick={handleLogout} isPrimary>
-        LOGOUT
+        Logout
       </Button>
     </section>
   );
