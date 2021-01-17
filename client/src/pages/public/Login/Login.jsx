@@ -1,7 +1,9 @@
 import { useDispatch } from 'react-redux';
 import { login } from 'store/actions/user-actions';
 import { useInputValue } from 'hooks/useInputValue';
-import { Field, Input, Label, Button } from 'components';
+import { Field, Input, Label, Button, Form, Icon } from 'components';
+import { faClock } from '@fortawesome/free-regular-svg-icons';
+import './Login.scss';
 
 const Login = () => {
   const [ email, handleEmailChange ] = useInputValue();
@@ -19,8 +21,8 @@ const Login = () => {
   
   return (
     <section className='login-page'>
-      <h1>Login page</h1>
-      <form onSubmit={handleFormSubmit}>
+      <Form onSubmit={handleFormSubmit} isAccessForm>
+        <Icon icon={faClock} isHuge isPrimary extraClasses='logo' />
         <Field
           Label={<Label text='Email' />}
           Input={<Input
@@ -45,7 +47,7 @@ const Login = () => {
         <Button type="submit" isPrimary>
           Login
         </Button>
-      </form>
+      </Form>
     </section>
   );
 };

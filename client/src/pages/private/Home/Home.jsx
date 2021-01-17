@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <section>
       <h1>Home</h1>
-      <Button onClick={handleLogout}>
+      <Button onClick={handleLogout} isPrimary>
         LOGOUT
       </Button>
     </section>

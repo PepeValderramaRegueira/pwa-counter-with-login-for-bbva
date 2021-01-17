@@ -36,8 +36,8 @@ export const login = (user) => async(dispatch) => {
       type: LOGIN,
       payload: { user: loginResponse.data }
     });
-  } catch (err) {
-    
+  } catch (error) {
+    console.error('Login error', error);
   }
 };
 
