@@ -7,7 +7,10 @@ $colors: (
   "light-grey": #eeeeee,
   "light-grey-2": #dddddd,
   "black": #444444,
-  "on-surface": #444444
+  "on-surface": #444444,
+  'error': #e63946,
+  'on-error': #ffffff,
+  'warning': #f4a261,
 );
 
 @function color($color: 'primary') {

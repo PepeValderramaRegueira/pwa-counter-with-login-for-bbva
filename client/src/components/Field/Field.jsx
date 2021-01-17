@@ -1,12 +1,18 @@
+import './Field.scss';
+
 const Field = ({
   extraClasses = '',
-  children
+  Input,
+  Label,
+  message = null
 }) => {
   return (
-    <div
-      className={`field ${extraClasses}`.trimRight()}
-    >
-      {children}
+    <div className={`field ${extraClasses}`.trimRight()} >
+      {Label}
+      {Input}
+      {message !== null && (
+        <p className={`message is-${message.type}`}>{message.text}</p>
+      )}
     </div>
   );
 }
