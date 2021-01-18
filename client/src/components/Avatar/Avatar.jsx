@@ -18,7 +18,7 @@ const Avatar = ({
   );
 }
 
-Avatar.PropTypes = {
+Avatar.propTypes = {
   /**
    * User object.
    */
