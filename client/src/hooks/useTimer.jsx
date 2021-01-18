@@ -19,8 +19,6 @@ const useTimer = (initialTime) => {
     const minutesNow = Math.floor(difference / MS_TO_MINUTES % 60);
     const hoursNow = Math.floor(difference / MS_TO_HOURS % 24);
     const daysNow = Math.floor(difference / MS_TO_DAYS);
-
-    console.log('lanzando');
     
     setSeconds(secondsNow);
     setMinutes(minutesNow);
