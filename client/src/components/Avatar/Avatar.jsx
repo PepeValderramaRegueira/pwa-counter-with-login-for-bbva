@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Title } from 'components';
 import AvatarImage from 'assets/images/rocket.png';
 import './Avatar.scss';
@@ -15,6 +16,18 @@ const Avatar = ({
       />
     </div>
   );
+}
+
+Avatar.PropTypes = {
+  /**
+   * User object.
+   */
+  user: PropTypes.shape({
+    /**
+     * User email.
+     */
+    email: PropTypes.string.isRequired
+  })
 }
 
 export default Avatar;
