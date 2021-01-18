@@ -1,0 +1,26 @@
+@import './../../styles/variables.scss';
+
+.form {
+  .field:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.form.is-access {
+  background-color: color('surface');
+  border-radius: 5px;
+  box-shadow: 0 3px 5px rgba(color('black'), .18);
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  .logo {
+    display: block;
+    margin: 0 auto 2rem;
+  }
+}

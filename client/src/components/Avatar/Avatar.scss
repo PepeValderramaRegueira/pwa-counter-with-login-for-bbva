@@ -1,0 +1,23 @@
+@import './../../styles/variables';
+
+.avatar {
+  text-align: center;
+  
+  .profile-image {
+    border-radius: 50%;
+    width: 100px;
+    margin-bottom: 1.25rem;
+    box-shadow:
+      0 0 0 10px #ffffff,
+      0 0 0 12px rgba(color('dark-primary'), 1),
+      0 3px 5px 12px rgba(color('black'), .5);
+  }
+
+  .profile-email {
+    margin-top: 0;
+    font-size: 1rem;
+    font-weight: font('medium');
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}

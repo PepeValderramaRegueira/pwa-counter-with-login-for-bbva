@@ -1,0 +1,15 @@
+@import './../../styles/variables.scss';
+
+.app-container {
+  background-color: color('background');
+  border-radius: 5px;
+  box-shadow: 0 3px 5px rgba(color('black'), .28);
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  padding: 2rem;
+  max-width: 768px;
+}
