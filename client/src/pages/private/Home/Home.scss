@@ -1,0 +1,15 @@
+@import './../../../styles/variables';
+
+.home-page {
+  .timer-number-container {
+    margin-bottom: 2rem;
+    
+    .timer-number:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  .avatar {
+    margin-bottom: 1rem;
+  }
+}
