@@ -1,5 +1,5 @@
 import { useTimer } from 'hooks/useTimer';
-import { FlexContainer, TimerNumber } from 'components';
+import { GridContainer, TimerNumber } from 'components';
 import './Timer.scss';
 
 const Timer = ({ initialTime }) => {
@@ -7,12 +7,12 @@ const Timer = ({ initialTime }) => {
   
   return (
     <div className="timer">
-      <FlexContainer extraClasses='jc-c'>
+      <GridContainer extraClasses='jc-c timer-number-container'>
         <TimerNumber number={days} text='Days' />
         <TimerNumber number={hours} text='Hours' />
         <TimerNumber number={minutes} text='Minutes' />
         <TimerNumber number={seconds} text='Seconds' />
-      </FlexContainer>
+      </GridContainer>
     </div>
   );
 }

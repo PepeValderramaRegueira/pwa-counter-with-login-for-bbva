@@ -8,6 +8,7 @@ import AppContainer from './AppContainer';
 import Title from './Title';
 import Avatar from './Avatar';
 import FlexContainer from './FlexContainer';
+import GridContainer from './GridContainer';
 import Timer from './Timer';
 import TimerNumber from './TimerNumber';
 
@@ -23,5 +24,6 @@ export {
   Avatar,
   FlexContainer,
   Timer,
-  TimerNumber
+  TimerNumber,
+  GridContainer
 }

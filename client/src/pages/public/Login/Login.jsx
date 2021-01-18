@@ -46,7 +46,7 @@ const Login = () => {
         />
         <div className="form-actions">
           <Button type="submit" isPrimary>
-            Login
+            LOGIN
           </Button>
         </div>
       </Form>

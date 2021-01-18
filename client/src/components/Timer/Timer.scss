@@ -1,0 +1,6 @@
+.timer {
+  .timer-number-container {
+    grid-template-columns: repeat(auto-fit, minmax(75px, 75px));
+    gap: 1rem;
+  }
+}
