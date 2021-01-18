@@ -1,5 +1,32 @@
 @import './../../styles/variables';
 
 .timer-number {
+  $size: 75px;
+  
+  background-color: color('white');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: $size;
+  height: $size;
+  box-shadow: 0 2px 3px rgba(color('black'), .34);
+  font-family: font('primary');
 
+  .content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .number {
+    color: color('primary');
+  }
+
+  .text {
+    color: color('grey');
+    text-transform: uppercase;
+    font-weight: font('medium');
+    font-size: .8rem;
+  }
 }
